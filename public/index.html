@@ -17,6 +17,31 @@
 </head>
 
 <body>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC6dC-ml4XjZXt_2y1cOBghEHkGMJ3WdFs",
+    authDomain: "add-it-up-4d4da.firebaseapp.com",
+    databaseURL: "https://add-it-up-4d4da.firebaseio.com",
+    projectId: "add-it-up-4d4da",
+    storageBucket: "add-it-up-4d4da.appspot.com",
+    messagingSenderId: "216435361329",
+    appId: "1:216435361329:web:356fd44212697e02367710",
+    measurementId: "G-7BJ24QS7E9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
     <script>
         if (typeof module === 'object') {
             window.module = module;
@@ -27,6 +52,7 @@
     <!-- Libraries -->
     <script type="text/javascript" src="lib/howler/howler.min.js"></script>
     <script type="text/javascript" src="lib/jsPsych/jspsych.min.js"></script>
+    <script type="text/javascript" src="lib/jsPsych/plugins/jspsych-survey-html-form.js"></script>
     <script type="text/javascript" src="lib/jsPsych/plugins/jspsych-categorize-html.js"></script>
     <script type="text/javascript" src="lib/jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
     <script type="text/javascript" src="lib/jsPsych/plugins/jspsych-survey-text-task-specific.js"></script>

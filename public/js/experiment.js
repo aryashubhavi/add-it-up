@@ -35,13 +35,38 @@ timeline.push(welcome_page);
 /**
  * Input subject identifier
  */
-let subject_identifier = {
-    type: 'survey-text',
-    questions: [
-        {prompt: "Please enter the subject ID", name: 'SubjectID', required: true}
-    ],
-};
-timeline.push(subject_identifier);
+// let subject_identifier = {
+//     type: 'survey-text',
+//     questions: [
+//         {prompt: "Please enter the subject ID", name: 'SubjectID', required: true}
+//     ],
+// };
+// timeline.push(subject_identifier);
+
+let cntracs_survey = {
+    type:  'survey-html-form',
+    preamble: '<p> The following questions ask about your alcohol use. All information will be treated as strictly confidential. </br> </p>',
+    html: '<p>1. How often do you have a drink containing alcohol?</br> <input type = "checkbox" name ="one" value="never" \
+    <label for="one"> Never </label> <input type = "checkbox" name ="one" value="monthly" \
+    <label for="one"> Monthly or less </label> <input type = "checkbox" name ="one" value="2-4" \
+    <label for="one"> 2-4 times a week </label> <input type = "checkbox" name ="one" value="2-3" \
+    <label for="one"> 2-3 times a week </label> <input type = "checkbox" name ="one" value="four or more" \
+    <label for="one"> Four or more times a week </label><br><br> \
+    \
+    2. How many drinks containing alcohol do you have on a typical day when you are drinking?</br>\
+    <input type = "checkbox" name ="two" value="0-2" <label for="two"> 0-2 </label>\
+    <input type = "checkbox" name ="two" value="3-4" <label for="two"> 3-4 </label>\
+    <input type = "checkbox" name ="two" value="5-6" <label for="two"> 5-6 </label>\
+    <input type = "checkbox" name ="two" value="7-9" <label for="two"> 7-9 </label>\
+    <input type = "checkbox" name ="two" value="10 or more" <label for="two"> 10 or more </label><br><br>\
+    \
+    3.How often do you have six (for male; four for female) or more drinks on one occasion?<br>\
+    <input type = "checkbox" name ="three" value="never" <label for="three"> Never </label>\
+    <input type = "checkbox" name ="three" value="less than monthly" <label for="three"> Less than monthly </label>\
+    </p>'
+}
+
+timeline.push(cntracs_survey);
 
 /**
  * Instructions block.
